@@ -11,7 +11,11 @@ int main() {
         reader >> name >> surname >> salary >> data;
         sum += salary;
         std::cout << name << " " << surname << " " << salary << " " << data << "\n";
-
+        if (big_sal < salary) {
+            big_sal = salary;
+            great_name = name + " " + surname;
+        }
     }
-    std::cout << "Total amount of money earned: " << sum << "\n";
+    std::cout << "\n\nTotal amount of money earned: " << sum << "\n";
+    std::cout << "The largest amount in: " << great_name;
 }
